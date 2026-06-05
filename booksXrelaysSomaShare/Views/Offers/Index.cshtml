@@ -1,0 +1,84 @@
+﻿@model IEnumerable<booksXrelaysSomaShare.Models.Offer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>SomaShare Offers List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OfferPrice)
+            </th>
+            <th>
+                Textbook Title
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserEmail)
+            </th>
+            <th>
+                Offer Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfferPrice)
+            </td>
+            <td>
+                    @item.Textbook?.Title
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmail)
+            </td>
+                <td>
+                    @if (item.IsAccepted)
+                    {
+                        <span class="badge bg-success">
+                            Accepted
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning text-dark">
+                            Pending
+                        </span>
+                    }
+                </td>
+            <td>
+                    @if (!item.IsAccepted)
+                    {
+                        <a asp-action="Accept"
+                           asp-route-id="@item.OfferId"
+                           class="btn btn-success btn-sm">
+                            Accept
+                        </a>
+
+                        <a asp-action="Reject"
+                           asp-route-id="@item.OfferId"
+                           class="btn btn-danger btn-sm">
+                            Reject
+                        </a>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success">
+                            Offer Accepted
+                        </span>
+                    }
+                <a asp-action="Edit" asp-route-id="@item.OfferId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OfferId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OfferId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

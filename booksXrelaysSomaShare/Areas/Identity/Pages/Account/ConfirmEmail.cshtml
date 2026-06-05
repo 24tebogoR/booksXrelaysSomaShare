@@ -1,0 +1,24 @@
+﻿@page
+@model ConfirmEmailModel
+@{
+    ViewData["Title"] = "Confirm email";
+    //SS3 IMPROVEMENT SUCCESS DISPLAY AFTER CONFIRMING EMAIL TAKING YOU TO LOG IN PAGE
+}
+
+
+<h1>Confirm Email</h1>
+
+<div class="alert alert-success">
+    Thank you for confirming your email.
+</div>
+
+<p>
+    Your SomaShare account has been successfully verified.
+    You can now log in and access the platform.
+</p>
+
+<a asp-area="Identity"
+       asp-page="/Account/Login"
+       class="btn btn-primary">
+    Go to Login
+</a>

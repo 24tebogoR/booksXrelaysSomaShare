@@ -1,0 +1,111 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+     ViewData["Title"] = "Dashboard";
+}
+
+<h1>Welcome To My SomaShare Dashboard</h1>
+
+<p class="text-muted">
+    View and manage your textbooks, offers, transactions, reviews and marketplace activity.
+</p>
+
+<!-- This Inform users about safe trading (Africanisation context) -->
+<div class="alert alert-info">
+    <strong>Community Tip:</strong> Use Cash on Meetup safely on campus and check user reviews before exchanging textbooks.
+</div>
+
+<div class="row">
+
+    <!-- Shows number of textbooks the user has listed -->
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm p-3">
+            <h5>My Listings</h5>
+            <h2>@ViewBag.Textbooks</h2>
+            <a asp-controller="Textbook" asp-action="Index" class="btn btn-primary btn-sm">View Listings</a>
+        </div>
+    </div>
+
+    <!-- Shows wanted ads created by users -->
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm p-3">
+            <h5>Wanted Ads</h5>
+            <h2>@ViewBag.WantedAds</h2>
+            <a asp-controller="WantedAds" asp-action="Index" class="btn btn-primary btn-sm">View Wanted Ads</a>
+        </div>
+    </div>
+
+    <!-- Shows offers made or received -->
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm p-3">
+            <h5>My Offers</h5>
+            <h2>@ViewBag.Offers</h2>
+            <a asp-controller="Offers" asp-action="Index" class="btn btn-primary btn-sm">View Offers</a>
+        </div>
+    </div>
+
+    <!-- Shows all transactions -->
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm p-3">
+            <h5>Transactions</h5>
+            <h2>@ViewBag.Transactions</h2>
+            <a asp-controller="Transactions" asp-action="Index" class="btn btn-primary btn-sm">View Transactions</a>
+        </div>
+    </div>
+
+    <!-- Shows completed transactions -->
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm p-3">
+            <h5>Completed Transactions</h5>
+            <h2>@ViewBag.CompletedTransactions</h2>
+        </div>
+    </div>
+
+    <!-- Shows average review rating -->
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm p-3">
+            <h5>Average Rating</h5>
+            <h2>@ViewBag.AverageRating.ToString("0.0") ⭐</h2>
+        </div>
+    </div>
+
+    <!-- Shows user reviews and ratings -->
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm p-3">
+            <h5>Reviews</h5>
+            <h2>@ViewBag.Reviews</h2>
+            <a asp-controller="Reviews" asp-action="Index" class="btn btn-primary btn-sm">View Reviews</a>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h3>Quick Actions</h3>
+
+<!-- Quick navigation buttons for main system features -->
+<div class="mb-3">
+    <a asp-controller="Textbook" asp-action="Create" class="btn btn-success">
+        Sell a Textbook
+    </a>
+
+    <a asp-controller="WantedAds" asp-action="Create" class="btn btn-warning">
+        Post Wanted Ad
+    </a>
+
+    <a asp-controller="Textbook" asp-action="Index" class="btn btn-secondary">
+        Browse Textbooks
+    </a>
+</div>
+
+<hr />
+
+<h3>Africanisation Features</h3>
+
+<!-- This Shows how the system supports African context -->
+<ul>
+    <li>Cash on Meetup payment option for safe campus exchanges</li>
+    <li>Community trust through reviews and ratings</li>
+    <li>Supports affordability by allowing students to buy and sell used textbooks</li>
+</ul>

@@ -1,0 +1,76 @@
+﻿@model booksXrelaysSomaShare.Models.Transaction
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Transaction</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OfferId" class="control-label">Select Offerl</label>
+                <select asp-for="OfferId" class="form-control" asp-items="ViewBag.OfferId"></select>
+                <span asp-validation-for="OfferId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TransactionDate" class="control-label"></label>
+                <input asp-for="TransactionDate" class="form-control" />
+                <span asp-validation-for="TransactionDate" class="text-danger"></span>
+            </div>
+
+            <!-- SS3 Improvement -->
+            <input type="hidden" asp-for="IsCompleted" value="false" />
+
+            <div class="alert alert-info mt-3">
+                <strong>Status:</strong> New transactions are created as Pending.
+                The seller can mark them as completed once the exchange has taken place.
+            </div>
+            <div class="form-group">
+                <label asp-for="MeetupLocation"></label>
+                <select asp-for="MeetupLocation" class="form-control">
+                    <option>Library Entrance</option>
+                    <option>Student Centre</option>
+                    <option>Main Campus Gate</option>
+                    <option>Cafeteria</option>
+                </select>
+            </div>
+
+            <!-- SS3 Improvement -->
+            <div class="alert alert-warning mt-3">
+
+                <h6>Safe Trading Guidelines</h6>
+
+                <ul>
+                    <li>Meet in public campus locations.</li>
+                    <li>Inspect the textbook before payment.</li>
+                    <li>Avoid sharing sensitive banking information.</li>
+                    <li>Complete transactions during SCHOOL hours.</li>
+                </ul>
+
+                <p>
+                    <strong>Recommended Payment Method:</strong>
+                    Cash on Meetup
+                </p>
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

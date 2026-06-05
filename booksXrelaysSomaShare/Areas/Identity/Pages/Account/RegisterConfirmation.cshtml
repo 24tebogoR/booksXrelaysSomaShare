@@ -1,0 +1,29 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Register confirmation";
+}
+
+<h1>@ViewData["Title"]</h1>
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+        //SS3 improvement registered user can click the confirm button after registering their account
+        <p>
+            Please confirm your account by clicking the link below:
+        </p>
+
+        <a id="confirm-link"
+               class="btn btn-primary"
+               href="@Model.EmailConfirmationUrl">
+            Confirm Account
+        </a>
+    }
+    else
+    {
+<p>
+        Please check your email to confirm your account.
+</p>
+    }
+}
+
