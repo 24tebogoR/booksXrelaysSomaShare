@@ -1,5 +1,5 @@
 ## Somashare
-The increasing cost of academic textbooks creates financial barriers for many university students. Students often struggle to purchase prescribed learning materials, resulting in reduced academic accessibility and increased educational inequality. SomaShare was developed to provide an affordable digital marketplace where students can buy, sell, and exchange second-hand textbooks.  
+With The increasing cost of academic textbooks creates financial barriers for many university students. Students often struggle to purchase prescribed learning materials, resulting in reduced academic accessibility and increased educational inequality. SomaShare was developed to provide an affordable digital marketplace where students can buy, sell, and exchange second-hand textbooks.  
 
 ## Features
 1. User Authentication and Authorization
