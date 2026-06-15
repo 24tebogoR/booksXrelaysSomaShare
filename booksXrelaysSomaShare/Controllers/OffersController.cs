@@ -9,6 +9,7 @@ using System.Security.Claims;
 
 namespace booksXrelaysSomaShare.Controllers
 {
+    //Accessable to all users
     [Authorize]
     public class OffersController : Controller
     {
