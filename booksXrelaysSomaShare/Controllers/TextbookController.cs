@@ -111,7 +111,7 @@ namespace booksXrelaysSomaShare.Controllers
 
         // Employee Edit
 
-        // SS3 updated feature only the seller and admin can edit textbooks//
+        // SS3 updated feature where the seller and admin can edit textbooks//
         [Authorize(Roles = "Seller,Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
