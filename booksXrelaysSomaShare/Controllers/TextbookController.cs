@@ -62,7 +62,7 @@ namespace booksXrelaysSomaShare.Controllers
 
         //Create
 
-        // SS3 updated feature only the seller and admin can create textbooks//
+        // SS3 updated feature where the seller and admin can create textbooks//
         [Authorize(Roles = "Seller,Admin")]
 
         public IActionResult Create()
