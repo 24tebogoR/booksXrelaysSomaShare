@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace booksXrelaysSomaShare.Controllers
 {
+    //Accessable to all users
     [Authorize]
     public class ReviewsController : Controller
     {
