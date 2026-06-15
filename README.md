@@ -18,4 +18,17 @@ With The increasing cost of academic textbooks creates financial barriers for ma
 5. Entity Framework Core
 6. SQL Server Management Studio 22
 7. SQL Express
-8. Bootstrap 
+8. Bootstrap
+
+## System Architecture
+
+## Database Design
+<img width="768" height="948" alt="ered ss3 soma" src="https://github.com/user-attachments/assets/07d46d96-691f-4e3d-8d4d-5a9675accf3d" />
+
+## Installation Process
+1. Clone Repository
+2. Update Connection String
+3. Run Migrations
+4. Update Database
+5. Run Application
+
