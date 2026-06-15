@@ -21,6 +21,8 @@ With The increasing cost of academic textbooks creates financial barriers for ma
 8. Bootstrap
 
 ## System Architecture
+<img width="506" height="1176" alt="SomaShare Architecture Diagram drawio" src="https://github.com/user-attachments/assets/23e80cd8-7856-46ec-aa75-c88582a15355" />
+
 
 ## Database Design
 <img width="768" height="948" alt="ered ss3 soma" src="https://github.com/user-attachments/assets/07d46d96-691f-4e3d-8d4d-5a9675accf3d" />
