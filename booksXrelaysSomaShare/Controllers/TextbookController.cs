@@ -168,7 +168,7 @@ namespace booksXrelaysSomaShare.Controllers
         // Textbook delete
 
 
-        // SS3 updated feature only the seller and admin can delete textbooks//
+        // SS3 updated feature Where the seller and admin can delete textbooks//
         [Authorize(Roles = "Seller,Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
