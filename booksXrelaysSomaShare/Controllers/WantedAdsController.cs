@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace booksXrelaysSomaShare.Controllers
 {
-    // SS3 updated feature only the buyer and admin can access wanted ads//
+    // SS3 updated feature where the buyer and admin can access wanted ads//
     [Authorize(Roles = "Buyer,Admin")]
 
     public class WantedAdsController : Controller
